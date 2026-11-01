@@ -1,0 +1,20 @@
+FILE 05 - PREPROCESSING AND SIGNAL VALIDATION
+======================================================================
+Total files: 129
+Total rows: 304,299
+Files with missing values: 122
+Files with non-numeric values: 1
+Files with range issues: 61
+Files with processing errors: 0
+Total genuine missing values: 295,412
+Total non-numeric values: 1
+Exact duplicate rows: 42,537
+Range violations: 60,109
+
+Validation policy:
+Raw CSV files were not modified.
+No rows were deleted.
+No values were imputed.
+Exact duplicate rows were retained.
+Range violations were flagged rather than automatically removed.
+Only required numeric signals were converted for validation.

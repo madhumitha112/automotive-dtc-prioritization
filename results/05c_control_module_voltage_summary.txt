@@ -1,0 +1,29 @@
+FILE 05C - CONTROL MODULE VOLTAGE INVESTIGATION
+======================================================================
+Total observations: 304,296
+Minimum: 0.000000
+Maximum: 100.000000
+Mean: 18.003611
+Median: 6.666667
+
+Percentiles:
+P001.0: 0.000000
+P005.0: 0.000000
+P025.0: 0.000000
+P050.0: 6.666667
+P075.0: 24.313726
+P095.0: 86.274513
+P099.0: 100.000000
+
+Value bands:
+10–16 V: 59,260 (19.47%)
+<10 V: 154,766 (50.86%)
+>16 V: 90,270 (29.67%)
+>20 V: 83,009 (27.28%)
+>30 V: 60,109 (19.75%)
+>50 V: 38,077 (12.51%)
+>65.535 V: 26,360 (8.66%)
+
+Interpretation note:
+PID 42 is standardized as control module voltage in volts using (256*A+B)/1000.
+The investigation bands above are descriptive only and are not diagnostic thresholds.
