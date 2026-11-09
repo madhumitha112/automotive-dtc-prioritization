@@ -29,8 +29,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 BASE_GENERATOR = ROOT / "src" / "dataset_generator" / "generate_dataset.py"
 
-RAW_DIR = ROOT / "data" / "expanded_v4" / "raw"
-RESULTS_DIR = ROOT / "results" / "expanded_v4"
+RAW_DIR = ROOT / "data" / "raw"
+RESULTS_DIR = ROOT / "results"
 
 CAN_FILE = RAW_DIR / "can_diagnostic_dataset_v4.csv"
 EVENT_FILE = RAW_DIR / "diagnostic_events_v4.csv"
