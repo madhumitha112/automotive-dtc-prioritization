@@ -1,0 +1,3 @@
+benchmark,case_count,rank_improved,rank_worsened,rank_unchanged,top1_corrected,top1_regressed,both_correct,both_incorrect
+V3,48,8,0,40,8,0,20,20
+V4,24,8,0,16,8,0,12,4

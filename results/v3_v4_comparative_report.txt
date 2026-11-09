@@ -1,0 +1,52 @@
+EXPERIMENT 08 - V3 VS V4 COMPARATIVE ANALYSIS
+==============================================================================
+
+1. BENCHMARK STRUCTURE
+------------------------------------------------------------------------------
+V3: 48 cases; mean candidate count = 2.2500
+V4: 24 cases; mean candidate count = 2.0000
+
+V3 contains 48 cases. V4 contains 24 cases from 12 scenario templates repeated twice.
+The V4 repetitions are not 24 independent scenario families.
+
+2. METHOD METRICS
+------------------------------------------------------------------------------
+benchmark                 method  case_count  top1_accuracy  top3_accuracy      mrr  mean_primary_rank  median_primary_rank  mean_candidate_count
+       V3        Static baseline          48       0.416667            1.0 0.680556           1.750000                  2.0                  2.25
+       V3 CAN-context refinement          48       0.583333            1.0 0.791667           1.416667                  1.0                  2.25
+       V3   Context minus static          48       0.166667            0.0 0.111111          -0.333333                 -1.0                  0.00
+       V4        Static baseline          24       0.500000            1.0 0.750000           1.500000                  1.5                  2.00
+       V4 CAN-context refinement          24       0.833333            1.0 0.916667           1.166667                  1.0                  2.00
+       V4   Context minus static          24       0.333333            0.0 0.166667          -0.333333                 -0.5                  0.00
+
+3. PAIRED CASE OUTCOMES
+------------------------------------------------------------------------------
+benchmark  case_count  rank_improved  rank_worsened  rank_unchanged  top1_corrected  top1_regressed  both_correct  both_incorrect
+       V3          48              8              0              40               8               0            20              20
+       V4          24              8              0              16               8               0            12               4
+
+4. TOP-1 IMPROVEMENT
+------------------------------------------------------------------------------
+V3: static = 0.4167; context = 0.5833; change = +16.67 percentage points
+V4: static = 0.5000; context = 0.8333; change = +33.33 percentage points
+
+5. INTERPRETATION AND LIMITATIONS
+------------------------------------------------------------------------------
+1. V3 and V4 are benchmark versions with different case counts and benchmark designs.
+2. V4 uses 12 scenario templates repeated twice; the repeated cases should not be treated as independent scenario families.
+3. V4 is a controlled synthetic benchmark and does not represent recordings from physical vehicles.
+4. The comparison measures ranking performance conditional on the supplied candidate DTC set. It does not evaluate DTC detection.
+5. Top-3 accuracy is not suitable as a primary cross-version comparison because V3 includes three-candidate cases while V4 has two candidates per case.
+6. Differences between V3 and V4 performance cannot be attributed solely to benchmark size. Scenario composition and candidate-pair composition also differ.
+7. These results do not establish generalization to real vehicles or unseen diagnostic conditions.
+8. No ranking rules, context thresholds, static priorities or context weights were changed.
+
+6. OUTPUT FILES
+------------------------------------------------------------------------------
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v3_v4_comparative_case_results.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v3_v4_comparative_metrics.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v3_v4_comparative_outcomes.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v3_v4_comparative_report.txt
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v3_v4_comparative_run.txt
+
+STATUS: PASS
