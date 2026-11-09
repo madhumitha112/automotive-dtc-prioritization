@@ -1,0 +1,45 @@
+﻿==============================================================================
+EXPERIMENT 04B - RULE VALIDITY AND CANDIDATE COVERAGE
+==============================================================================
+
+Diagnostic cases loaded: 48
+Candidate score records:  108
+
+==============================================================================
+RULE COVERAGE SUMMARY
+==============================================================================
+  dtc  primary_appearances  competing_appearances        coverage_assessment
+P0171                    8                     12 BASIC_COMPARATIVE_COVERAGE
+P0172                    8                      0         NO_COMPETING_CASES
+P0128                    8                      0         NO_COMPETING_CASES
+P0300                    8                      8 BASIC_COMPARATIVE_COVERAGE
+P0130                    4                     12 BASIC_COMPARATIVE_COVERAGE
+P0121                    4                     24 BASIC_COMPARATIVE_COVERAGE
+P0335                    4                      4 BASIC_COMPARATIVE_COVERAGE
+C0035                    4                      0         NO_COMPETING_CASES
+
+Unique candidate signatures:
+      scenario_signature  repetition_count
+      C0035::C0035|P0121                 4
+      P0121::P0121|P0171                 4
+P0128::P0121|P0128|P0130                 4
+P0128::P0121|P0128|P0171                 4
+      P0130::P0130|P0171                 4
+      P0171::P0121|P0171                 4
+      P0171::P0130|P0171                 4
+      P0172::P0130|P0172                 4
+      P0172::P0172|P0300                 4
+      P0300::P0121|P0300                 4
+      P0300::P0300|P0335                 4
+P0335::P0121|P0300|P0335                 4
+
+Coverage gaps identified: 8
+
+Output files:
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_rule_coverage_summary.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_pairwise_candidate_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_scenario_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_coverage_gaps.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_rule_validity_report.txt
+
+STATUS: PASS

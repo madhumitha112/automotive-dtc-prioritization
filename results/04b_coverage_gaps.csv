@@ -1,0 +1,9 @@
+dtc,gap_type,evidence,recommended_action
+P0172,NO_COMPETING_CASES,Rule is observed only when this DTC is primary.,Add cases where this DTC competes with other candidates.
+P0172,LOW_SAMPLE_COVERAGE,Primary=8; competing=0.,Increase scenario diversity before drawing strong conclusions.
+P0128,NO_COMPETING_CASES,Rule is observed only when this DTC is primary.,Add cases where this DTC competes with other candidates.
+P0128,LOW_SAMPLE_COVERAGE,Primary=8; competing=0.,Increase scenario diversity before drawing strong conclusions.
+P0300,NO_POSITIVE_PRIMARY_SCORE_SEPARATION,Primary-minus-competing mean score=0.0000.,Inspect overlapping evidence and rule specificity.
+P0335,NO_POSITIVE_PRIMARY_SCORE_SEPARATION,Primary-minus-competing mean score=-0.0030.,Inspect overlapping evidence and rule specificity.
+C0035,NO_COMPETING_CASES,Rule is observed only when this DTC is primary.,Add cases where this DTC competes with other candidates.
+C0035,LOW_SAMPLE_COVERAGE,Primary=4; competing=0.,Increase scenario diversity before drawing strong conclusions.

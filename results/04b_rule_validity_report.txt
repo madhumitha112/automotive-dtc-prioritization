@@ -1,0 +1,87 @@
+
+==============================================================================
+EXPERIMENT 04B - RULE COVERAGE SUMMARY
+==============================================================================
+Diagnostic cases: 48
+Candidate score records: 108
+Unique DTCs: 8
+Unique candidate signatures: 12
+Scenario signature repetitions: {'count': 12.0, 'mean': 4.0, 'std': 0.0, 'min': 4.0, '25%': 4.0, '50%': 4.0, '75%': 4.0, 'max': 4.0}
+
+==============================================================================
+1. RULE COVERAGE
+==============================================================================
+  dtc  total_candidate_appearances  primary_appearances  competing_appearances  primary_activation_rate  competing_activation_rate  primary_mean_context_score  competing_mean_context_score  primary_strong_activation_rate  competing_strong_activation_rate        coverage_assessment
+P0171                           20                    8                     12                     0.50                   0.000000                    0.500000                      0.000000                             0.5                          0.000000 BASIC_COMPARATIVE_COVERAGE
+P0172                            8                    8                      0                     0.75                   0.000000                    0.500333                           NaN                             0.5                          0.000000         NO_COMPETING_CASES
+P0128                            8                    8                      0                     1.00                   0.000000                    1.000000                           NaN                             1.0                          0.000000         NO_COMPETING_CASES
+P0300                           16                    8                      8                     0.00                   0.000000                    0.000000                      0.000000                             0.0                          0.000000 BASIC_COMPARATIVE_COVERAGE
+P0130                           16                    4                     12                     1.00                   1.000000                    0.864514                      0.660675                             1.0                          0.666667 BASIC_COMPARATIVE_COVERAGE
+P0121                           28                    4                     24                     1.00                   0.041667                    0.424767                      0.000055                             0.0                          0.000000 BASIC_COMPARATIVE_COVERAGE
+P0335                            8                    4                      4                     1.00                   1.000000                    0.045939                      0.048935                             0.0                          0.000000 BASIC_COMPARATIVE_COVERAGE
+C0035                            4                    4                      0                     1.00                   0.000000                    1.000000                           NaN                             1.0                          0.000000         NO_COMPETING_CASES
+==============================================================================
+2. PAIRWISE CANDIDATE COVERAGE
+==============================================================================
+dtc_a dtc_b  cooccurrence_cases  dtc_a_primary_cases  dtc_b_primary_cases  both_primary_labels_observed            pair_coverage
+P0171 P0128                   4                    0                    4                             0       ONE_DIRECTION_ONLY
+P0171 P0130                   8                    4                    4                             1 BOTH_DIRECTIONS_OBSERVED
+P0171 P0121                  12                    4                    4                             1 BOTH_DIRECTIONS_OBSERVED
+P0172 P0300                   4                    4                    0                             0       ONE_DIRECTION_ONLY
+P0172 P0130                   4                    4                    0                             0       ONE_DIRECTION_ONLY
+P0128 P0130                   4                    4                    0                             0       ONE_DIRECTION_ONLY
+P0128 P0121                   8                    8                    0                             0       ONE_DIRECTION_ONLY
+P0300 P0121                   8                    4                    0                             0       ONE_DIRECTION_ONLY
+P0300 P0335                   8                    4                    4                             1 BOTH_DIRECTIONS_OBSERVED
+P0130 P0121                   4                    0                    0                             0       ONE_DIRECTION_ONLY
+P0121 P0335                   4                    0                    4                             0       ONE_DIRECTION_ONLY
+P0121 C0035                   4                    0                    4                             0       ONE_DIRECTION_ONLY
+==============================================================================
+3. UNIQUE SCENARIO COVERAGE
+==============================================================================
+      scenario_signature primary_dtc     candidate_set  candidate_count  repetition_count        case_ids
+      C0035::C0035|P0121       C0035       C0035|P0121                2                 4 S08|S20|S32|S44
+      P0121::P0121|P0171       P0121       P0121|P0171                2                 4 S06|S18|S30|S42
+P0128::P0121|P0128|P0130       P0128 P0121|P0128|P0130                3                 4 S11|S23|S35|S47
+P0128::P0121|P0128|P0171       P0128 P0121|P0128|P0171                3                 4 S03|S15|S27|S39
+      P0130::P0130|P0171       P0130       P0130|P0171                2                 4 S05|S17|S29|S41
+      P0171::P0121|P0171       P0171       P0121|P0171                2                 4 S09|S21|S33|S45
+      P0171::P0130|P0171       P0171       P0130|P0171                2                 4 S01|S13|S25|S37
+      P0172::P0130|P0172       P0172       P0130|P0172                2                 4 S02|S14|S26|S38
+      P0172::P0172|P0300       P0172       P0172|P0300                2                 4 S10|S22|S34|S46
+      P0300::P0121|P0300       P0300       P0121|P0300                2                 4 S04|S16|S28|S40
+      P0300::P0300|P0335       P0300       P0300|P0335                2                 4 S12|S24|S36|S48
+P0335::P0121|P0300|P0335       P0335 P0121|P0300|P0335                3                 4 S07|S19|S31|S43
+==============================================================================
+4. COVERAGE GAPS
+==============================================================================
+  dtc                             gap_type                                        evidence                                             recommended_action
+P0172                   NO_COMPETING_CASES Rule is observed only when this DTC is primary.       Add cases where this DTC competes with other candidates.
+P0172                  LOW_SAMPLE_COVERAGE                         Primary=8; competing=0. Increase scenario diversity before drawing strong conclusions.
+P0128                   NO_COMPETING_CASES Rule is observed only when this DTC is primary.       Add cases where this DTC competes with other candidates.
+P0128                  LOW_SAMPLE_COVERAGE                         Primary=8; competing=0. Increase scenario diversity before drawing strong conclusions.
+P0300 NO_POSITIVE_PRIMARY_SCORE_SEPARATION      Primary-minus-competing mean score=0.0000.             Inspect overlapping evidence and rule specificity.
+P0335 NO_POSITIVE_PRIMARY_SCORE_SEPARATION     Primary-minus-competing mean score=-0.0030.             Inspect overlapping evidence and rule specificity.
+C0035                   NO_COMPETING_CASES Rule is observed only when this DTC is primary.       Add cases where this DTC competes with other candidates.
+C0035                  LOW_SAMPLE_COVERAGE                         Primary=4; competing=0. Increase scenario diversity before drawing strong conclusions.
+==============================================================================
+5. INTERPRETATION LIMITATIONS
+==============================================================================
+1. Candidate appearances are not independent experiments.
+2. Repeated scenario signatures do not add scenario diversity.
+3. Primary-versus-competing score differences are descriptive.
+4. Activation does not establish diagnostic specificity.
+5. A rule with no competing appearances cannot be assessed for discrimination.
+6. This audit does not establish statistical significance.
+7. No thresholds, weights, or ranking rules were changed.
+
+==============================================================================
+6. OUTPUT FILES
+==============================================================================
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_rule_coverage_summary.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_pairwise_candidate_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_scenario_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_coverage_gaps.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\04b_rule_validity_report.txt
+
+STATUS: PASS

@@ -1,0 +1,1309 @@
+{
+  "status": "PASS",
+  "dataset": "automotive-dtc-benchmark-v1",
+  "checks": {
+    "can_rows": 353808,
+    "event_rows": 108,
+    "can_columns": [
+      "session_id",
+      "timestamp_s",
+      "CAN_ID",
+      "DLC",
+      "DATA0",
+      "DATA1",
+      "DATA2",
+      "DATA3",
+      "DATA4",
+      "DATA5",
+      "DATA6",
+      "DATA7",
+      "frame_type",
+      "message_name"
+    ],
+    "event_columns": [
+      "session_id",
+      "dtc",
+      "ecu",
+      "event_start_s",
+      "event_end_s",
+      "event_role",
+      "context_condition"
+    ],
+    "null_counts_can": {},
+    "null_counts_events": {},
+    "data_byte_range_violations": {},
+    "invalid_can_id_count": 0,
+    "unique_can_ids": 6,
+    "can_id_counts": {
+      "0x100": 86400,
+      "0x101": 86400,
+      "0x102": 86400,
+      "0x103": 86400,
+      "0x7E8": 7904,
+      "0x7E9": 304
+    },
+    "frame_types": [
+      "context",
+      "diagnostic"
+    ],
+    "unique_sessions": 48,
+    "event_sessions": 48,
+    "session_timing": {
+      "S01": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S02": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S03": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S04": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S05": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S06": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S07": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S08": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S09": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S10": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S11": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S12": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S13": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S14": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S15": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S16": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S17": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S18": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S19": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S20": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S21": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S22": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S23": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S24": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S25": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S26": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S27": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S28": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S29": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S30": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S31": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S32": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S33": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S34": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S35": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S36": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S37": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S38": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S39": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S40": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S41": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S42": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S43": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S44": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S45": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S46": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S47": {
+        "rows": 7428,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5628,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      },
+      "S48": {
+        "rows": 7352,
+        "start_s": 0.0,
+        "end_s": 1799.0,
+        "duration_s": 1799.0,
+        "non_monotonic_count": 0,
+        "duplicate_timestamp_count": 5552,
+        "min_delta_s": 0.0,
+        "median_delta_s": 0.0,
+        "max_delta_s": 1.0
+      }
+    },
+    "unique_dtcs": [
+      "C0035",
+      "P0121",
+      "P0128",
+      "P0130",
+      "P0171",
+      "P0172",
+      "P0300",
+      "P0335"
+    ],
+    "unique_ecus": [
+      "ABS",
+      "ENGINE"
+    ],
+    "invalid_dtc_strings": [],
+    "events_per_session": {
+      "S01": 2,
+      "S02": 2,
+      "S03": 3,
+      "S04": 2,
+      "S05": 2,
+      "S06": 2,
+      "S07": 3,
+      "S08": 2,
+      "S09": 2,
+      "S10": 2,
+      "S11": 3,
+      "S12": 2,
+      "S13": 2,
+      "S14": 2,
+      "S15": 3,
+      "S16": 2,
+      "S17": 2,
+      "S18": 2,
+      "S19": 3,
+      "S20": 2,
+      "S21": 2,
+      "S22": 2,
+      "S23": 3,
+      "S24": 2,
+      "S25": 2,
+      "S26": 2,
+      "S27": 3,
+      "S28": 2,
+      "S29": 2,
+      "S30": 2,
+      "S31": 3,
+      "S32": 2,
+      "S33": 2,
+      "S34": 2,
+      "S35": 3,
+      "S36": 2,
+      "S37": 2,
+      "S38": 2,
+      "S39": 3,
+      "S40": 2,
+      "S41": 2,
+      "S42": 2,
+      "S43": 3,
+      "S44": 2,
+      "S45": 2,
+      "S46": 2,
+      "S47": 3,
+      "S48": 2
+    },
+    "diagnostic_frame_rows": 8208,
+    "event_diagnostic_frame_coverage": [
+      {
+        "session_id": "S01",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S01",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S02",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S02",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S03",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S03",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S03",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S04",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S04",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S05",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S05",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S06",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S06",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S07",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S07",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S07",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S08",
+        "dtc": "C0035",
+        "ecu": "ABS",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S08",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S09",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S09",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S10",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S10",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S11",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S11",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S11",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S12",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S12",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S13",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S13",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S14",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S14",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S15",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S15",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S15",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S16",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S16",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S17",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S17",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S18",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S18",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S19",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S19",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S19",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S20",
+        "dtc": "C0035",
+        "ecu": "ABS",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S20",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S21",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S21",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S22",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S22",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S23",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S23",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S23",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S24",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S24",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S25",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S25",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S26",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S26",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S27",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S27",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S27",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S28",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S28",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S29",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S29",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S30",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S30",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S31",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S31",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S31",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S32",
+        "dtc": "C0035",
+        "ecu": "ABS",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S32",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S33",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S33",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S34",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S34",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S35",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S35",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S35",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S36",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S36",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S37",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S37",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S38",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S38",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S39",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S39",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S39",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S40",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S40",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S41",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S41",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S42",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S42",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S43",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S43",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S43",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S44",
+        "dtc": "C0035",
+        "ecu": "ABS",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S44",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S45",
+        "dtc": "P0171",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S45",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S46",
+        "dtc": "P0172",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S46",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S47",
+        "dtc": "P0128",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S47",
+        "dtc": "P0130",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S47",
+        "dtc": "P0121",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 228
+      },
+      {
+        "session_id": "S48",
+        "dtc": "P0300",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      },
+      {
+        "session_id": "S48",
+        "dtc": "P0335",
+        "ecu": "ENGINE",
+        "diagnostic_frames_in_event_interval": 152
+      }
+    ],
+    "events_outside_session_bounds": [],
+    "potential_leakage_columns": [],
+    "dtc_columns_in_can_file": [],
+    "expected_diagnostic_ids_present": [
+      "0x7E8",
+      "0x7E9"
+    ],
+    "context_frame_count": 345600,
+    "diagnostic_frame_count": 8208
+  },
+  "issues": [],
+  "warnings": []
+}

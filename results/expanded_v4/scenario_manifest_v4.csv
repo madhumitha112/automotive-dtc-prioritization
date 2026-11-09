@@ -1,0 +1,25 @@
+session_id,template_id,repetition,primary_dtc,candidate_dtcs,context_condition,coverage_role,context_design
+V4_001,V4_01,1,P0171,P0171|P0172,LEAN_FUEL,P0171 primary; P0172 competing,positive fuel-trim evidence
+V4_002,V4_01,2,P0171,P0171|P0172,LEAN_FUEL,P0171 primary; P0172 competing,positive fuel-trim evidence
+V4_003,V4_02,1,P0172,P0172|P0171,RICH_FUEL,P0172 primary; P0171 competing,negative fuel-trim evidence
+V4_004,V4_02,2,P0172,P0172|P0171,RICH_FUEL,P0172 primary; P0171 competing,negative fuel-trim evidence
+V4_005,V4_03,1,P0128,P0128|P0171,LOW_COOLANT_TEMP,P0128 primary; P0171 competing,low coolant-temperature evidence
+V4_006,V4_03,2,P0128,P0128|P0171,LOW_COOLANT_TEMP,P0128 primary; P0171 competing,low coolant-temperature evidence
+V4_007,V4_04,1,P0171,P0171|P0128,LEAN_FUEL,P0128 competing,fuel-trim evidence without low-coolant evidence
+V4_008,V4_04,2,P0171,P0171|P0128,LEAN_FUEL,P0128 competing,fuel-trim evidence without low-coolant evidence
+V4_009,V4_05,1,C0035,C0035|P0121,LEFT_WHEEL_SPEED,C0035 primary; P0121 competing,left-front wheel-speed disagreement
+V4_010,V4_05,2,C0035,C0035|P0121,LEFT_WHEEL_SPEED,C0035 primary; P0121 competing,left-front wheel-speed disagreement
+V4_011,V4_06,1,P0121,P0121|C0035,THROTTLE_MISMATCH,C0035 competing,pedal/throttle mismatch without wheel-speed fault
+V4_012,V4_06,2,P0121,P0121|C0035,THROTTLE_MISMATCH,C0035 competing,pedal/throttle mismatch without wheel-speed fault
+V4_013,V4_07,1,P0300,P0300|P0335,MISFIRE_LOAD,P0300 primary; P0335 competing,load-associated RPM drops
+V4_014,V4_07,2,P0300,P0300|P0335,MISFIRE_LOAD,P0300 primary; P0335 competing,load-associated RPM drops
+V4_015,V4_08,1,P0335,P0335|P0300,CRANK_SIGNAL,P0335 primary; P0300 competing,intermittent RPM drops; indirect CKP proxy only
+V4_016,V4_08,2,P0335,P0335|P0300,CRANK_SIGNAL,P0335 primary; P0300 competing,intermittent RPM drops; indirect CKP proxy only
+V4_017,V4_09,1,P0130,P0130|P0171,O2_BIAS,P0130 primary; P0171 competing,oxygen-signal bias
+V4_018,V4_09,2,P0130,P0130|P0171,O2_BIAS,P0130 primary; P0171 competing,oxygen-signal bias
+V4_019,V4_10,1,P0171,P0171|P0130,LEAN_FUEL,P0130 competing,positive fuel-trim evidence
+V4_020,V4_10,2,P0171,P0171|P0130,LEAN_FUEL,P0130 competing,positive fuel-trim evidence
+V4_021,V4_11,1,P0121,P0121|P0300,THROTTLE_MISMATCH,P0300 competing,throttle mismatch without imposed RPM-drop pattern
+V4_022,V4_11,2,P0121,P0121|P0300,THROTTLE_MISMATCH,P0300 competing,throttle mismatch without imposed RPM-drop pattern
+V4_023,V4_12,1,P0300,P0300|P0121,MISFIRE_LOAD,P0300 primary; P0121 competing,load-associated RPM drops
+V4_024,V4_12,2,P0300,P0300|P0121,MISFIRE_LOAD,P0300 primary; P0121 competing,load-associated RPM drops

@@ -1,0 +1,64 @@
+{
+  "dataset_name": "automotive-dtc-benchmark-v3",
+  "dataset_type": "controlled synthetic automotive diagnostic benchmark",
+  "seed": 20261103,
+  "episodes": 48,
+  "session_duration_s": 1800,
+  "base_context_rate_hz": 1,
+  "diagnostic_period_s": 10,
+  "fault_interval_s": [
+    600,
+    1350
+  ],
+  "unique_dtcs": [
+    "C0035",
+    "P0121",
+    "P0128",
+    "P0130",
+    "P0171",
+    "P0172",
+    "P0300",
+    "P0335"
+  ],
+  "dtc_ecu": {
+    "P0171": "ENGINE",
+    "P0172": "ENGINE",
+    "P0128": "ENGINE",
+    "P0300": "ENGINE",
+    "P0130": "ENGINE",
+    "P0121": "ENGINE",
+    "P0335": "ENGINE",
+    "C0035": "ABS"
+  },
+  "dtc_descriptions": {
+    "P0171": "System too lean",
+    "P0172": "System too rich",
+    "P0128": "Coolant thermostat temperature below regulating temperature",
+    "P0300": "Random or multiple cylinder misfire detected",
+    "P0130": "Oxygen sensor circuit malfunction",
+    "P0121": "Throttle position sensor range/performance",
+    "P0335": "Crankshaft position sensor circuit malfunction",
+    "C0035": "Left front wheel speed sensor circuit"
+  },
+  "diagnostic_protocol": {
+    "service": "UDS ReadDTCInformation",
+    "service_id": "0x19",
+    "subfunction": "0x02 reportDTCByStatusMask",
+    "positive_response": "0x59",
+    "dtc_status_availability_mask": "0xFF",
+    "dtc_representation": "3-byte SAE J2012-style DTC including Failure Type Byte",
+    "transport": "ISO-TP single-frame CAN payload"
+  },
+  "diagnostic_payload_example": {
+    "P0171": "07 59 02 FF 01 71 00 09"
+  },
+  "can_message_definitions": {
+    "0x100": "ENGINE_DYNAMICS",
+    "0x101": "ENGINE_THERMAL_AIR",
+    "0x102": "DRIVER_FUEL",
+    "0x103": "WHEEL_SPEEDS",
+    "0x7E8": "ENGINE diagnostic response",
+    "0x7E9": "ABS diagnostic response"
+  },
+  "research_integrity_note": "Primary DTC, secondary DTC, and context-condition fields are event metadata for experimental evaluation. They are not present in CAN payloads and must not be used as input features by the prioritization methods."
+}
