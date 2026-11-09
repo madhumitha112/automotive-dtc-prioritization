@@ -1,0 +1,88 @@
+EXPERIMENT 07 - V4 COVERAGE AND VALIDITY ANALYSIS
+==============================================================================
+
+
+==============================================================================
+1. BENCHMARK STRUCTURE
+==============================================================================
+Diagnostic cases: 24
+Scenario manifest rows: 24
+Unique scenario templates: 12
+Unique context conditions: 8
+Expected repetitions per template: 2
+Case integrity checks passed: 24/24
+
+==============================================================================
+2. DTC COVERAGE
+==============================================================================
+  dtc  primary_case_count  competing_case_count  total_candidate_appearances  primary_template_count  competing_template_count  primary_case_share  candidate_case_share       coverage_assessment
+P0171                   6                     6                           12                       3                         3            0.250000              0.500000       OBSERVED_BOTH_ROLES
+P0172                   2                     2                            4                       1                         1            0.083333              0.166667 LIMITED_TEMPLATE_COVERAGE
+P0128                   2                     2                            4                       1                         1            0.083333              0.166667 LIMITED_TEMPLATE_COVERAGE
+P0300                   4                     4                            8                       2                         2            0.166667              0.333333       OBSERVED_BOTH_ROLES
+P0130                   2                     2                            4                       1                         1            0.083333              0.166667 LIMITED_TEMPLATE_COVERAGE
+P0121                   4                     4                            8                       2                         2            0.166667              0.333333       OBSERVED_BOTH_ROLES
+P0335                   2                     2                            4                       1                         1            0.083333              0.166667 LIMITED_TEMPLATE_COVERAGE
+C0035                   2                     2                            4                       1                         1            0.083333              0.166667 LIMITED_TEMPLATE_COVERAGE
+==============================================================================
+3. PAIRWISE CANDIDATE COVERAGE
+==============================================================================
+Possible DTC pairs: 28
+Observed pairs: 6
+Pairs tested in both primary directions: 6
+Pairs tested in one primary direction only: 0
+Pairs with no co-occurrence: 22
+
+dtc_a dtc_b  cooccurrence_cases  dtc_a_primary_cases  dtc_b_primary_cases  unique_template_count template_ids                 context_conditions         pair_coverage_assessment
+C0035 P0121                   4                    2                    2                      2  V4_05|V4_06 LEFT_WHEEL_SPEED|THROTTLE_MISMATCH BOTH_PRIMARY_DIRECTIONS_OBSERVED
+P0121 P0300                   4                    2                    2                      2  V4_11|V4_12     MISFIRE_LOAD|THROTTLE_MISMATCH BOTH_PRIMARY_DIRECTIONS_OBSERVED
+P0128 P0171                   4                    2                    2                      2  V4_03|V4_04         LEAN_FUEL|LOW_COOLANT_TEMP BOTH_PRIMARY_DIRECTIONS_OBSERVED
+P0130 P0171                   4                    2                    2                      2  V4_09|V4_10                  LEAN_FUEL|O2_BIAS BOTH_PRIMARY_DIRECTIONS_OBSERVED
+P0171 P0172                   4                    2                    2                      2  V4_01|V4_02                LEAN_FUEL|RICH_FUEL BOTH_PRIMARY_DIRECTIONS_OBSERVED
+P0300 P0335                   4                    2                    2                      2  V4_07|V4_08          CRANK_SIGNAL|MISFIRE_LOAD BOTH_PRIMARY_DIRECTIONS_OBSERVED
+==============================================================================
+4. TEMPLATE COVERAGE
+==============================================================================
+template_id  case_count repetition_values candidate_sets primary_dtc_labels context_conditions  static_top1_correct_cases  context_top1_correct_cases  static_top1_accuracy  context_top1_accuracy  template_repetition_count          template_status
+      V4_01           2               1|2    P0171|P0172              P0171          LEAN_FUEL                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_02           2               1|2    P0171|P0172              P0172          RICH_FUEL                          0                           2                   0.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_03           2               1|2    P0128|P0171              P0128   LOW_COOLANT_TEMP                          0                           2                   0.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_04           2               1|2    P0128|P0171              P0171          LEAN_FUEL                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_05           2               1|2    C0035|P0121              C0035   LEFT_WHEEL_SPEED                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_06           2               1|2    C0035|P0121              P0121  THROTTLE_MISMATCH                          0                           2                   0.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_07           2               1|2    P0300|P0335              P0300       MISFIRE_LOAD                          0                           0                   0.0                    0.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_08           2               1|2    P0300|P0335              P0335       CRANK_SIGNAL                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_09           2               1|2    P0130|P0171              P0130            O2_BIAS                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_10           2               1|2    P0130|P0171              P0171          LEAN_FUEL                          0                           0                   0.0                    0.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_11           2               1|2    P0121|P0300              P0121  THROTTLE_MISMATCH                          0                           2                   0.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+      V4_12           2               1|2    P0121|P0300              P0300       MISFIRE_LOAD                          2                           2                   1.0                    1.0                          2 EXPECTED_TWO_REPETITIONS
+==============================================================================
+5. RANKING PERFORMANCE BY TEMPLATE
+==============================================================================
+Static overall Top-1 accuracy: 0.5000
+Context overall Top-1 accuracy: 0.8333
+
+==============================================================================
+6. VALIDITY LIMITATIONS
+==============================================================================
+1. V4 is a controlled synthetic benchmark, not data recorded from physical vehicles.
+2. The 24 cases consist of 12 scenario templates repeated twice with different signal noise.
+3. Repetitions within a template do not constitute independent scenario families.
+4. Each case contains two candidates. The analysis does not establish performance with larger candidate sets.
+5. The candidate list is assumed to be supplied by an upstream diagnostic layer. DTC detection is not evaluated.
+6. Pairwise coverage is limited to the candidate combinations represented in V4.
+7. P0335 uses an indirect RPM-instability proxy; a direct crankshaft-position waveform is not represented.
+8. Ranking results are benchmark-specific and do not establish real-vehicle diagnostic performance.
+9. No dataset, threshold, context weight or ranking rule was changed in this analysis.
+
+==============================================================================
+7. OUTPUT FILES
+==============================================================================
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_validity_dtc_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_validity_pair_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_validity_template_coverage.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_validity_case_checks.csv
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_coverage_validity_report.txt
+C:\Users\91729\Desktop\Madhu\Git projects\automotive-dtc-prioritization\results\v4_coverage_validity_run.txt
+
+STATUS: PASS
