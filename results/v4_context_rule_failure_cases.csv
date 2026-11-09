@@ -1,0 +1,5 @@
+case_id,candidate_dtcs,primary_dtc,primary_rank,top1_dtc,top1_static_score,top1_context_score,primary_static_score,primary_context_score,context_score_difference_top1_minus_primary,full_ranking
+V4_013,P0300|P0335,P0300,2,P0335,1.0,0.0,0.95,0.0,0.0,P0335|P0300
+V4_014,P0300|P0335,P0300,2,P0335,1.0,0.0,0.95,0.0,0.0,P0335|P0300
+V4_019,P0171|P0130,P0171,2,P0130,0.7,0.9973368841544608,0.65,1.0,-0.0026631158455392434,P0130|P0171
+V4_020,P0171|P0130,P0171,2,P0130,0.7,0.9973368841544608,0.65,1.0,-0.0026631158455392434,P0130|P0171

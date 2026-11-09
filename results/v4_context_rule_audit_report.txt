@@ -1,0 +1,62 @@
+EXPERIMENT 06 - V4 CAN-CONTEXT RULE AUDIT
+==============================================================================
+
+BENCHMARK SUMMARY
+------------------------------------------------------------------------------
+Cases audited: 24
+Candidate-level records: 48
+Context weight: 1.00
+Static priorities and context rules were not modified.
+
+FULL MODEL VS STATIC BASELINE
+------------------------------------------------------------------------------
+Static Top-1 accuracy: 0.5000
+Context Top-1 accuracy: 0.8333
+Static MRR: 0.7500
+Context MRR: 0.9167
+
+RULE ACTIVATION AND DISCRIMINATION
+------------------------------------------------------------------------------
+  dtc  candidate_appearances  primary_appearances  competing_appearances  mean_context_score_all  mean_context_score_primary  mean_context_score_competing  primary_minus_competing_mean_score  activation_pct_all  activation_pct_primary  activation_pct_competing  strong_activation_pct_primary  strong_activation_pct_competing        coverage_assessment
+P0335                      4                    2                      2                  0.0240                      0.0479                        0.0000                              0.0479                50.0                   100.0                       0.0                            0.0                              0.0           LIMITED_COVERAGE
+P0300                      8                    4                      4                  0.0000                      0.0000                        0.0000                              0.0000                 0.0                     0.0                       0.0                            0.0                              0.0 BASIC_COMPARATIVE_COVERAGE
+C0035                      4                    2                      2                  0.5000                      1.0000                        0.0000                              1.0000                50.0                   100.0                       0.0                          100.0                              0.0           LIMITED_COVERAGE
+P0121                      8                    4                      4                  0.2165                      0.4331                        0.0000                              0.4331                50.0                   100.0                       0.0                            0.0                              0.0 BASIC_COMPARATIVE_COVERAGE
+P0130                      4                    2                      2                  0.9414                      0.8855                        0.9973                             -0.1119               100.0                   100.0                     100.0                          100.0                            100.0           LIMITED_COVERAGE
+P0171                     12                    6                      6                  0.5000                      1.0000                        0.0000                              1.0000                50.0                   100.0                       0.0                          100.0                              0.0 BASIC_COMPARATIVE_COVERAGE
+P0172                      4                    2                      2                  0.5000                      1.0000                        0.0000                              1.0000                50.0                   100.0                       0.0                          100.0                              0.0           LIMITED_COVERAGE
+P0128                      4                    2                      2                  0.5000                      1.0000                        0.0000                              1.0000                50.0                   100.0                       0.0                          100.0                              0.0           LIMITED_COVERAGE
+
+LEAVE-ONE-RULE-OUT ABLATION
+------------------------------------------------------------------------------
+     configuration removed_rule  case_count  top1_accuracy    mrr  mean_primary_rank  median_primary_rank  top1_delta_vs_full  mrr_delta_vs_full  mean_rank_delta_vs_full
+       STATIC_ONLY         NONE          24         0.5000 0.7500             1.5000                  1.5             -0.3333            -0.1667                   0.3333
+FULL_CONTEXT_MODEL         NONE          24         0.8333 0.9167             1.1667                  1.0              0.0000             0.0000                   0.0000
+      RULE_REMOVED        P0335          24         0.8333 0.9167             1.1667                  1.0              0.0000             0.0000                   0.0000
+      RULE_REMOVED        P0300          24         0.8333 0.9167             1.1667                  1.0              0.0000             0.0000                   0.0000
+      RULE_REMOVED        C0035          24         0.8333 0.9167             1.1667                  1.0              0.0000             0.0000                   0.0000
+      RULE_REMOVED        P0121          24         0.6667 0.8333             1.3333                  1.0             -0.1667            -0.0833                   0.1667
+      RULE_REMOVED        P0130          24         0.9167 0.9583             1.0833                  1.0              0.0833             0.0417                  -0.0833
+      RULE_REMOVED        P0171          24         0.8333 0.9167             1.1667                  1.0              0.0000             0.0000                   0.0000
+      RULE_REMOVED        P0172          24         0.7500 0.8750             1.2500                  1.0             -0.0833            -0.0417                   0.0833
+      RULE_REMOVED        P0128          24         0.7500 0.8750             1.2500                  1.0             -0.0833            -0.0417                   0.0833
+
+FAILURE CASES
+------------------------------------------------------------------------------
+case_id candidate_dtcs primary_dtc  primary_rank top1_dtc  top1_static_score  top1_context_score  primary_static_score  primary_context_score  context_score_difference_top1_minus_primary full_ranking
+ V4_013    P0300|P0335       P0300             2    P0335                1.0              0.0000                  0.95                    0.0                                       0.0000  P0335|P0300
+ V4_014    P0300|P0335       P0300             2    P0335                1.0              0.0000                  0.95                    0.0                                       0.0000  P0335|P0300
+ V4_019    P0171|P0130       P0171             2    P0130                0.7              0.9973                  0.65                    1.0                                      -0.0027  P0130|P0171
+ V4_020    P0171|P0130       P0171             2    P0130                0.7              0.9973                  0.65                    1.0                                      -0.0027  P0130|P0171
+
+INTERPRETATION LIMITATIONS
+------------------------------------------------------------------------------
+1. Context scores represent threshold-based evidence fractions, not calibrated fault probabilities.
+2. Primary-versus-competing score comparisons are descriptive and do not establish statistical significance.
+3. Ablation measures the effect of zeroing one DTC's context contribution while retaining its static priority.
+4. A rule's ranking contribution is specific to this V4 benchmark and its candidate combinations.
+5. The V4 benchmark contains 12 scenario templates with two repetitions each; repetitions are not independent real-world vehicle trials.
+6. P0335 evidence uses RPM instability as an indirect proxy, not a direct crankshaft-position waveform.
+7. No thresholds, weights, decoding definitions or ranking rules were tuned in this audit.
+
+STATUS: PASS
