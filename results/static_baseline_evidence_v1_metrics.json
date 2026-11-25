@@ -1,0 +1,22 @@
+[
+  {
+    "benchmark": "v3",
+    "cases": 48,
+    "top_1_accuracy": 0.4166666666666667,
+    "mrr": 0.6805555555555555,
+    "mean_primary_rank": 1.75,
+    "top_3_accuracy": 1.0,
+    "priority_config_version": "evidence-informed-v1",
+    "interpretation": "study-defined benchmark result; not real-vehicle validation"
+  },
+  {
+    "benchmark": "v4",
+    "cases": 24,
+    "top_1_accuracy": 0.5,
+    "mrr": 0.75,
+    "mean_primary_rank": 1.5,
+    "top_3_accuracy": 1.0,
+    "priority_config_version": "evidence-informed-v1",
+    "interpretation": "study-defined benchmark result; not real-vehicle validation"
+  }
+]
