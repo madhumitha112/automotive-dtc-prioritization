@@ -1,0 +1,98 @@
+{
+  "version": "evidence-informed-v1",
+  "purpose": "Alternative static DTC priority baseline for controlled comparison",
+  "status": "provisional_study_defined_classes",
+  "score_direction": "higher_score_means_higher_diagnostic_ordering_priority",
+  "score_mapping": {
+    "class_3": 0.9,
+    "class_2": 0.6,
+    "class_1": 0.3
+  },
+  "tie_break": "ascending_DTC_code_lexical_order",
+  "important_scope": [
+    "These are benchmark priority classes, not OEM severity values, safety ratings, repair instructions, or universal vehicle-independent urgency levels.",
+    "SAE J2012 defines standardized DTCs and descriptions; it does not establish the numeric priority scores used here.",
+    "Diagnostic urgency depends on vehicle, powertrain, calibration, fault status, symptoms, warning indicators, and manufacturer-specific fail-safe behavior.",
+    "Class assignments represent a broad potential-consequence rubric. They should be interpreted as a transparent experiment design choice, not a validated repair triage policy."
+  ],
+  "class_rubric": {
+    "class_3": "Potential for immediate operational impairment, loss of an important vehicle function, or significant secondary damage in applicable implementations.",
+    "class_2": "Potential to affect engine/throttle control, feedback control, drivability, or emissions/fuel control; urgency is condition-dependent.",
+    "class_1": "Typically associated with temperature-regulation/monitor behavior and often lower immediate operational impact, while still requiring vehicle-specific assessment."
+  },
+  "dtcs": [
+    {
+      "dtc": "P0335",
+      "class": 3,
+      "score": 0.9,
+      "reason": "Crankshaft-position signal faults can compromise engine-speed/position information and may cause no-start or engine operation issues in applicable vehicles.",
+      "evidence_scope": "generic functional consequence; exact symptom and fail-safe are OEM-specific"
+    },
+    {
+      "dtc": "P0300",
+      "class": 3,
+      "score": 0.9,
+      "reason": "A sufficiently severe misfire can impair operation and may overheat or damage the catalytic converter; severity depends on misfire rate and operating conditions.",
+      "evidence_scope": "OEM service information documents conditional catalyst risk; not every P0300 has the same severity"
+    },
+    {
+      "dtc": "C0035",
+      "class": 3,
+      "score": 0.9,
+      "reason": "A wheel-speed sensor fault may affect ABS/traction/stability functions in applicable chassis implementations.",
+      "evidence_scope": "system-function risk; affected features and fallback behavior vary by vehicle"
+    },
+    {
+      "dtc": "P0121",
+      "class": 2,
+      "score": 0.6,
+      "reason": "Throttle-position performance/plausibility fault can affect engine torque control or invoke reduced-power behavior.",
+      "evidence_scope": "OEM-specific reduced-power/limp strategy can make this more urgent than this generic class suggests"
+    },
+    {
+      "dtc": "P0130",
+      "class": 2,
+      "score": 0.6,
+      "reason": "Oxygen-sensor circuit fault can affect feedback-control diagnosis and emissions behavior.",
+      "evidence_scope": "fault subtype and operating state matter; code alone does not establish sensor failure or severity"
+    },
+    {
+      "dtc": "P0171",
+      "class": 2,
+      "score": 0.6,
+      "reason": "System-too-lean condition may reflect air/fuel control deviation and can affect drivability or emissions.",
+      "evidence_scope": "cause and consequence depend on operating conditions and the underlying fault"
+    },
+    {
+      "dtc": "P0172",
+      "class": 2,
+      "score": 0.6,
+      "reason": "System-too-rich condition may reflect air/fuel control deviation and can affect drivability, fuel use, or emissions.",
+      "evidence_scope": "cause and consequence depend on operating conditions and the underlying fault"
+    },
+    {
+      "dtc": "P0128",
+      "class": 1,
+      "score": 0.3,
+      "reason": "Coolant-temperature-regulation fault is often associated with warm-up, operating-temperature, fuel-economy, or emissions effects.",
+      "evidence_scope": "not categorically low risk; overheating or other symptoms require separate assessment"
+    }
+  ],
+  "references": [
+    {
+      "source": "SAE J2012",
+      "url": "https://saemobilus.sae.org/standards/j2012_202509-diagnostic-trouble-code-definitions",
+      "supports": "standardized DTC definitions and code scope; not the priority score mapping"
+    },
+    {
+      "source": "GM service information, DTC P0300",
+      "url": "https://gm.saturn.team/Generic/Unit_Repair/2002/15/1/2068/64962",
+      "supports": "conditional misfire/catalyst-damage consequence in a specific OEM service context"
+    },
+    {
+      "source": "2007 Saturn ION service information, DTC P0300",
+      "url": "https://charm.li/Saturn/2007/ION%20L4-2.2L/Repair%20and%20Diagnosis/A%20L%20L%20%20Diagnostic%20Trouble%20Codes%20%28%20DTC%20%29/Testing%20and%20Inspection/P%20Code%20Charts/P0300/",
+      "supports": "conditional catalyst overheating/damage risk from sufficiently high misfire rate"
+    }
+  ]
+}
